@@ -2,7 +2,7 @@
 title: "Mapa Sitios de Muestreo"
 subtitle: "Presentación Datos Objetivo 1"
 author: "Camilo Gálvez A."
-output: html_notebook
+output: html_document
 ---
 
 ```{r setup, include=FALSE}
@@ -25,7 +25,10 @@ mapdos <- leaflet() %>%
   addCircleMarkers(lng = -71.4975, lat = -29.223333, color = "#57E3FF", radius = 30, opacity = 1, label = "Hu") %>% 
   addMeasure(position = "bottomright", primaryLengthUnit = "kilometers") %>% 
   addScaleBar(position = "bottomleft")
-mapdos
-saveWidget(mapdos, file = "E:/R/Proyecto_Doctorado/Press/eTodas/bgMap.html")
+
+saveWidget(mapdos, file = "D:/Documents/GitHub/Interactive/interactivedata/map.html")
 ```
 
+```{r, echo=FALSE, message=TRUE, warning=TRUE}
+mapdos
+```
