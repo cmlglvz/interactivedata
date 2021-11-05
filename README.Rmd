@@ -1,0 +1,33 @@
+---
+title: "Mapa sitios de muestreo"
+output: github_document
+always_allow_html: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(knitr)
+library(viridis)
+library(leaflet)
+library(htmlwidgets)
+```
+
+```{r, echo=FALSE, message=TRUE, warning=TRUE}
+mapdos <- leaflet() %>% 
+  addTiles() %>% 
+  setView(lng = -70.667222, lat = -26.224278, zoom = 6) %>% 
+  addProviderTiles("Stamen.Toner") %>% 
+  addCircleMarkers(lng = -70.667222, lat = -26.224278, color = "#F77F00", radius = 30, opacity = 1, label = "Cha") %>% 
+  addCircleMarkers(lng = -70.7, lat = -26.548611, color = "#FCB740", radius = 30, opacity = 1, label = "Fla") %>% 
+  addCircleMarkers(lng = -71.210278, lat = -28.336944, color = "#023E8A", radius = 30, opacity = 1, label = "Hu") %>% 
+  addCircleMarkers(lng = -71.4975, lat = -29.223333, color = "#57E3FF", radius = 30, opacity = 1, label = "Hu") %>% 
+  addMeasure(position = "bottomright", primaryLengthUnit = "kilometers") %>% 
+  addScaleBar(position = "bottomleft")
+```
+
+```{r}
+mapdos
+```
+
+
