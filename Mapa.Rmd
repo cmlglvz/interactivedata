@@ -2,7 +2,7 @@
 title: "Mapa Sitios de Muestreo"
 subtitle: "Presentación Datos Objetivo 1"
 author: "Camilo Gálvez A."
-output: md_document
+output: rmarkdown::github_document
 ---
 
 ```{r setup, include=FALSE}
