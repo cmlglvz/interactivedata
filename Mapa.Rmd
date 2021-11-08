@@ -2,7 +2,7 @@
 title: "Mapa Sitios de Muestreo"
 subtitle: "Presentación Datos Objetivo 1"
 author: "Camilo Gálvez A."
-output: github_document
+output: html_document
 ---
 
 ```{r setup, include=FALSE}
@@ -19,14 +19,26 @@ mapdos <- leaflet() %>%
   addTiles() %>% 
   setView(lng = -70.667222, lat = -26.224278, zoom = 6) %>% 
   addProviderTiles("Stamen.Toner") %>% 
-  addCircleMarkers(lng = -70.667222, lat = -26.224278, color = "#F77F00", radius = 30, opacity = 1, label = "Cha") %>% 
-  addCircleMarkers(lng = -70.7, lat = -26.548611, color = "#FCB740", radius = 30, opacity = 1, label = "Fla") %>% 
-  addCircleMarkers(lng = -71.210278, lat = -28.336944, color = "#023E8A", radius = 30, opacity = 1, label = "Hu") %>% 
-  addCircleMarkers(lng = -71.4975, lat = -29.223333, color = "#57E3FF", radius = 30, opacity = 1, label = "Hu") %>% 
+  addCircleMarkers(lng = -70.647166, lat = -26.345461, color = "#CD6900", radius = 10, opacity = 1, label = "Cha_1") %>% 
+  addCircleMarkers(lng = -70.650278, lat = -26.337583, color = "#F77F00", radius = 10, opacity = 1, label = "Cha_2") %>% 
+  addCircleMarkers(lng = -70.637083, lat = -26.337389, color = "#F9962C", radius = 10, opacity = 1, label = "Cha_3") %>% 
+  addCircleMarkers(lng = -70.641694, lat = -26.332222, color = "#FAA950", radius = 10, opacity = 1, label = "Cha_4") %>% 
+  addCircleMarkers(lng = -70.698139, lat = -26.567028, color = "#BD8930", radius = 10, opacity = 1, label = "Fla_1") %>% 
+  addCircleMarkers(lng = -70.698666, lat = -26.557589, color = "#E5A63A", radius = 10, opacity = 1, label = "Fla_2") %>% 
+  addCircleMarkers(lng = -70.688092, lat = -26.558749, color = "#FCB740", radius = 10, opacity = 1, label = "Fla_3") %>% 
+  addCircleMarkers(lng = -70.689083, lat = -26.568167, color = "#FCC461", radius = 10, opacity = 1, label = "Fla_4") %>%
+  addCircleMarkers(lng = -71.257889, lat = -28.470556, color = "#012D64", radius = 10, opacity = 1, label = "Hu_1") %>% 
+  addCircleMarkers(lng = -71.261583, lat = -28.475833, color = "#023E8A", radius = 10, opacity = 1, label = "Hu_2") %>% 
+  addCircleMarkers(lng = -71.267107, lat = -28.475139, color = "#2E609F", radius = 10, opacity = 1, label = "Hu_3") %>% 
+  addCircleMarkers(lng = -71.267107, lat = -28.475139, color = "#527BB0", radius = 10, opacity = 1, label = "Hu_4") %>% 
+  addCircleMarkers(lng = -71.482389, lat = -29.213333, color = "#368D9F", radius = 10, opacity = 1, label = "Pc_1") %>% 
+  addCircleMarkers(lng = -71.482389, lat = -29.214083, color = "#48BBD3", radius = 10, opacity = 1, label = "Pc_2") %>% 
+  addCircleMarkers(lng = -71.486167, lat = -29.218972, color = "#57E3FF", radius = 10, opacity = 1, label = "Pc_3") %>% 
+  addCircleMarkers(lng = -71.473528, lat = -29.237027, color = "#A3F0FF", radius = 10, opacity = 1, label = "Pc_4") %>% 
   addMeasure(position = "bottomright", primaryLengthUnit = "kilometers") %>% 
   addScaleBar(position = "bottomleft")
 
-saveWidget(mapdos, file = "D:/Documents/GitHub/Interactive/interactivedata/map.html")
+saveWidget(mapdos, file = "/Users/Artemis/Documents/GitHub/interactivemap/index.html")
 ```
 
 ```{r, echo=FALSE, message=TRUE, warning=TRUE}
